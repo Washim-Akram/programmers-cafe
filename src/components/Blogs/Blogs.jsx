@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Blog from '../Blog/Blog';
 import './Blogs.css';
 
 const Blogs = () => {
@@ -9,9 +10,9 @@ const Blogs = () => {
         .then(data => setBlogs(data))
     },[])
     return (
-        <div>
+        <div className='grid grid-cols-1'>
             {
-                blogs.map( blog => console.log(blog))
+                blogs.map( blog => <Blog key={blog.id} blog={blog}></Blog>)
             }
         </div>
     );

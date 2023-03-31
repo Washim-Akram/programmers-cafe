@@ -1,0 +1,44 @@
+article {
+  max-width: 845px;
+  margin-bottom: 40px;
+}
+
+.blog-img {
+  max-height: 450px;
+  border-radius: 8px;
+  margin-bottom: 32px;
+}
+.author-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 24px;
+}
+
+.author-name {
+  font-weight: 700;
+  font-size: 24px;
+  color: #111111;
+}
+
+.text-blog-info {
+  font-weight: 500;
+  font-size: 20px;
+  color: rgba(17, 17, 17, 0.6);
+}
+
+.blog-title {
+  color: #111111;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 160%;
+  margin: 16px 0px;
+}
+
+.text-mark-as-read {
+  color: #6047ec;
+  text-decoration-line: underline;
+  line-height: 24px;
+  font-size: 20px;
+  font-weight: 600;
+}
