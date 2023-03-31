@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "blog_title": "How to get your first job as a self-taught programmer",
+    "blog_img_url": "https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    "author_name": "Mr. Raju",
+    "author_img_url": "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    "published_in": "Mar 14 (4 Days ago)",
+    "reading_time": 5,
+    "tag": "#beginners #programming"
+  },
+  {
+    "id": 2,
+    "blog_title": "The JavaScript Skills You Need to Know For React",
+    "blog_img_url": "https://images.unsplash.com/photo-1633356122544-f134324a6cee?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    "author_name": "Mr. Samrat",
+    "author_img_url": "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80",
+    "published_in": "Mar 13 (5 Days ago)",
+    "reading_time": 10,
+    "tag": "#beginners #programming"
+  },
+  {
+    "id": 3,
+    "blog_title": "The React Beginner's Guide 2023",
+    "blog_img_url": "https://images.unsplash.com/photo-1581276879432-15e50529f34b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    "author_name": "Mr. Mostafa",
+    "author_img_url": "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1148&q=80",
+    "published_in": "Mar 12 (6 Days ago)",
+    "reading_time": 12,
+    "tag": "#beginners #programming"
+  },
+  {
+    "id": 4,
+    "blog_title": "How to Write Simpler Code in JavaScript",
+    "blog_img_url": "https://images.unsplash.com/photo-1619410283995-43d9134e7656?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    "author_name": "Mr. Jackey",
+    "author_img_url": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+    "published_in": "Mar 11 (7 Days ago)",
+    "reading_time": 15,
+    "tag": "#beginners #programming"
+  }
+]
