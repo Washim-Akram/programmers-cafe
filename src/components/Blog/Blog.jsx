@@ -1,5 +1,8 @@
+import { faBookmark } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import Card from 'react-bootstrap/Card';
+
 import './Blog.css';
 
 const Blog = ({blog}) => {
@@ -9,8 +12,8 @@ const Blog = ({blog}) => {
             <Card>
                 <Card.Img className='blog-img img-fluid' variant="top" src={blog_img_url} />
                 <Card.Body>
-                    <div className='d-flex align-items-center justify-content-between'>
-                        <div className='d-flex align-items-center'>
+                    <div className='d-flex flex-column-reverse flex-md-row align-items-center justify-content-between'>
+                        <div className='d-flex align-items-center justify-content-between'>
                             <img className='author-img' src={author_img_url} alt="Name of the Blog Author" />
                             <div>
                                 <p className='author-name m-0'>{author_name}</p>
@@ -18,7 +21,9 @@ const Blog = ({blog}) => {
                             </div>
                         </div>
                         <div>
-                            <p className='text-blog-info'>{reading_time} min read</p>
+                            <p>
+                                <span className='text-blog-info'>{reading_time} min read <FontAwesomeIcon icon={faBookmark} /></span>
+                            </p>
                         </div>
                     </div>
                     <Card.Title className='blog-title'>{blog_title}</Card.Title>
