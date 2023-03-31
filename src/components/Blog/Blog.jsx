@@ -1,11 +1,11 @@
 import { faBookmark } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
+import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-
 import './Blog.css';
 
-const Blog = ({blog}) => {
+const Blog = ({blog, handleMarkAsRead}) => {
     const { blog_title, blog_img_url, author_img_url, author_name,published_in, reading_time, tag } = blog;
     return (
         <article>
@@ -28,7 +28,14 @@ const Blog = ({blog}) => {
                     </div>
                     <Card.Title className='blog-title'>{blog_title}</Card.Title>
                     <Card.Text ><a className='text-blog-info' href="#">{tag}</a></Card.Text>
-                    <a className='text-mark-as-read' href="#">Mark as read</a>
+
+                    <Button
+                     className='text-mark-as-read' variant="outline-light"
+                     onClick={ () => handleMarkAsRead(reading_time)}
+                     >
+                     Mark as read
+                    </Button>{' '}
+
                 </Card.Body>
 
             </Card>

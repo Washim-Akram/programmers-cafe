@@ -1,11 +1,17 @@
 import React from 'react';
 import './Cart.css';
 
-const Cart = () => {
+const Cart = ({markAsRead}) => {
+    let totalReadingTime = 0;
+    for(const mark of markAsRead) {
+        totalReadingTime = totalReadingTime + mark;
+    }
+
+
     return (
         <div>
             <div className='card-time-on-read'>
-                <p>Spent time on read : 177 min</p>
+                <p>Spent time on read : <span>{totalReadingTime}</span> min</p>
             </div>
             <div className='main-cart'>
                 <div className='cart'>

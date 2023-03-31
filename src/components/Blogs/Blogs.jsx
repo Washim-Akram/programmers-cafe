@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Blog from '../Blog/Blog';
 import './Blogs.css';
 
-const Blogs = () => {
+const Blogs = ({handleMarkAsRead}) => {
     const [blogs, setBlogs] = useState([]);
     useEffect( () => {
         fetch('blogs.json')
@@ -12,7 +12,11 @@ const Blogs = () => {
     return (
         <div className='grid grid-cols-1'>
             {
-                blogs.map( blog => <Blog key={blog.id} blog={blog}></Blog>)
+                blogs.map( blog => <Blog
+                    key={blog.id}
+                    handleMarkAsRead={handleMarkAsRead}
+                    blog={blog}>
+                    </Blog>)
             }
         </div>
     );
