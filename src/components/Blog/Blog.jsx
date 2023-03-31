@@ -5,7 +5,7 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import './Blog.css';
 
-const Blog = ({blog, handleMarkAsRead}) => {
+const Blog = ({blog, handleMarkAsRead, handleBookMark}) => {
     const { blog_title, blog_img_url, author_img_url, author_name,published_in, reading_time, tag } = blog;
     return (
         <article>
@@ -21,8 +21,13 @@ const Blog = ({blog, handleMarkAsRead}) => {
                             </div>
                         </div>
                         <div>
-                            <p>
-                                <span className='text-blog-info'>{reading_time} min read <FontAwesomeIcon icon={faBookmark} /></span>
+                            <p className='text-blog-info'>
+                                <span>{reading_time} min read</span>
+                                <FontAwesomeIcon
+                                 className='ms-3'
+                                 icon={faBookmark}
+                                 onClick={ () => handleBookMark(blog)}
+                                 />
                             </p>
                         </div>
                     </div>

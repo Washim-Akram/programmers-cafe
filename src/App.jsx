@@ -7,18 +7,30 @@ import Header from './components/Header/Header';
 
 function App() {
   const [markAsRead, setMarkAsRead] = useState([]);
+  const [bookMark, setBookMark] = useState([]);
 
   const handleMarkAsRead = (reading_time) => {
     const totalReadingTime = [...markAsRead, reading_time];
     setMarkAsRead(totalReadingTime);
 }
 
+const handleBookMark = (bookMarked) => {
+  const totalBookMark = [...bookMark, bookMarked];
+  setBookMark(totalBookMark);
+}
+
   return (
     <div className="App">
       <Header></Header>
       <div className='container d-flex flex-column flex-md-row gap-4 my-5'>
-        <Blogs handleMarkAsRead={handleMarkAsRead}></Blogs>
-        <Cart markAsRead={markAsRead}></Cart>
+        <Blogs
+         handleMarkAsRead={handleMarkAsRead}
+         handleBookMark={handleBookMark}
+         ></Blogs>
+        <Cart
+         markAsRead={markAsRead}
+         bookMark={bookMark}
+         ></Cart>
       </div>
     </div>
   )
