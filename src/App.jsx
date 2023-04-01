@@ -1,10 +1,13 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './App.css';
 import Blogs from './components/Blogs/Blogs';
 import Cart from './components/Cart/Cart';
 import Header from './components/Header/Header';
 import MyBlog from './components/MyBlog/MyBlog';
+
 
 function App() {
   const [markAsRead, setMarkAsRead] = useState([]);
@@ -16,8 +19,27 @@ function App() {
 }
 
 const handleBookMark = (bookMarked) => {
+  const {id, blog_title} = bookMarked;
+
   const totalBookMark = [...bookMark, bookMarked];
   setBookMark(totalBookMark);
+
+  const previousBookmark = JSON.parse(localStorage.getItem("bookmark"));
+  let bookmark = [];
+  const blogInfo = {id, blog_title};
+  if (previousBookmark) {
+    const isThisBlogMarked = previousBookmark.find((blog) => blog.id == id);
+    if (isThisBlogMarked) {
+      toast("You Have Already Bookmarked This Blog !");
+    } else {
+      bookmark.push(...previousBookmark, blogInfo);
+      localStorage.setItem("bookmark", JSON.stringify(bookmark));
+      console.log(bookmark);
+    }
+  } else {
+    bookmark.push(blogInfo);
+    localStorage.setItem("bookmark", JSON.stringify(bookmark));
+  }
 }
 
   return (
@@ -34,6 +56,7 @@ const handleBookMark = (bookMarked) => {
          ></Cart>
       </div>
       <MyBlog></MyBlog>
+      <ToastContainer />
     </div>
   )
 }
