@@ -20,9 +20,6 @@ function App() {
 
 const handleBookMark = (bookMarked) => {
   const {id, blog_title} = bookMarked;
-
-
-
   const previousBookmark = JSON.parse(localStorage.getItem("bookmark"));
   let bookmark = [];
   const blogInfo = {id, blog_title};
