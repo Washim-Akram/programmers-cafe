@@ -4,6 +4,7 @@ import './App.css';
 import Blogs from './components/Blogs/Blogs';
 import Cart from './components/Cart/Cart';
 import Header from './components/Header/Header';
+import MyBlog from './components/MyBlog/MyBlog';
 
 function App() {
   const [markAsRead, setMarkAsRead] = useState([]);
@@ -32,6 +33,7 @@ const handleBookMark = (bookMarked) => {
          bookMark={bookMark}
          ></Cart>
       </div>
+      <MyBlog></MyBlog>
     </div>
   )
 }
