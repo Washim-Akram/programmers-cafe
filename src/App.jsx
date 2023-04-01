@@ -21,8 +21,7 @@ function App() {
 const handleBookMark = (bookMarked) => {
   const {id, blog_title} = bookMarked;
 
-  const totalBookMark = [...bookMark, bookMarked];
-  setBookMark(totalBookMark);
+
 
   const previousBookmark = JSON.parse(localStorage.getItem("bookmark"));
   let bookmark = [];
@@ -34,13 +33,25 @@ const handleBookMark = (bookMarked) => {
     } else {
       bookmark.push(...previousBookmark, blogInfo);
       localStorage.setItem("bookmark", JSON.stringify(bookmark));
-      console.log(bookmark);
     }
   } else {
     bookmark.push(blogInfo);
     localStorage.setItem("bookmark", JSON.stringify(bookmark));
   }
+  const totalBookMark = [...bookMark, bookMarked];
+  setBookMark(totalBookMark);
 }
+
+const checkBookmark = (id) => {
+  const previousBookmark = JSON.parse(localStorage.getItem("bookmark"));
+
+  const isBookmarked = previousBookmark?.find((blog) => blog.id == id);
+  if (isBookmarked) {
+    return true;
+  } else {
+    return false;
+  }
+};
 
   return (
     <div className="App">
@@ -49,6 +60,7 @@ const handleBookMark = (bookMarked) => {
         <Blogs
          handleMarkAsRead={handleMarkAsRead}
          handleBookMark={handleBookMark}
+         checkBookmark={checkBookmark}
          ></Blogs>
         <Cart
          markAsRead={markAsRead}
